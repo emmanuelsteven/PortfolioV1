@@ -23,17 +23,17 @@ const Projects = forwardRef(function Projects(props, ref) {
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className='text-2xl font-bold text-gray-800 mt-8 mb-4'>
+        <h2 className=' flex items-center justify-center text-2xl font-bold text-gray-800 m-4 underlined-h2'>
           My<span className='text-black-500'> Projects</span>
         </h2>
         <motion.div
           animate={animateCard}
           transition={{ duration: 0.5, delayChildren: 0.5 }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-4'
         >
           {projectData.map((project, index) => (
-            <div key={index} className='app__work-item relative'>
-              <div className="app__work-img relative rounded-lg overflow-hidden">
+            <div key={index} className='relative'>
+              <div className=" relative rounded-lg overflow-hidden ">
                 <img src={project.image} alt={project.name} className='w-full h-full' />
 
                 <motion.div

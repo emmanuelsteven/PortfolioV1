@@ -22,12 +22,12 @@ const EyeTrackingComponent = () => {
   }, []); // Empty dependency array ensures the effect runs only once
 
   return (
-    <div className="flex items-center justify-center h-96">
-      <div className="eye w-32 h-24 rounded-full bg-white flex items-center justify-center">
-        <div className="pupil w-16 h-16 rounded-full bg-black"></div>
+    <div className="flex  justify-right h-30">
+      <div className="eye w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center">
+        <div className="pupil w-8 h-8 rounded-full bg-white"></div>
       </div>
-      <div className="eye w-32 h-24 rounded-full bg-white flex items-center justify-center">
-        <div className="pupil w-16 h-16 rounded-full bg-black"></div>
+      <div className="eye w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center">
+        <div className="pupil w-8 h-8 rounded-full bg-white"></div>
       </div>
     </div>
   );

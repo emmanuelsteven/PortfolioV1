@@ -13,7 +13,7 @@ function App() {
     <Navbar/>
     <Home />
     <Projects />
-    {/* <EyeTrackingComponent /> */}
+   
  
     </div>
   )
