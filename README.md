@@ -151,7 +151,7 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 We would like to thank:
-- Hats off of [Adeniji Victor](https://codevickk.com/) for a beautiful, efficient and inspiring Portfolio he built.
+- Hats off to [Adeniji Victor](https://codevickk.com/) for a beautiful, efficient and inspiring Portfolio he built.
 - Many thanks to [Yusuf Lawal](https://yusuflawal.vercel.app/) for a beautiful, efficient and inspiring Portfolio he built.
 - Many thanks to [Naza Adimoha](https://github.com/NazaAdimoha/My_Portfolio_Website) for a beautiful, efficient and inspiring Portfolio he built and for all the motivations and encouragements.
 
