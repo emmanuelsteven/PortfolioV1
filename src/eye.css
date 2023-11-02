@@ -27,3 +27,11 @@ body {
     border-radius: 101px;
     background-color: #000;
   }
+  .eye-tracker {
+    position: fixed; /* This will keep it fixed relative to the viewport */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Position at the left of the viewport */
+    z-index: 10; /* Adjust the z-index to ensure it appears above other elements if needed */
+    /* You may need to set width, height, and other styles to achieve your desired look */
+  }
+  

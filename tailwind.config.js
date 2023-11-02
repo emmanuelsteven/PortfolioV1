@@ -10,6 +10,9 @@ export default {
     dark: "#1b1b1b1b",
     light: "#f5f5f5",
   },
+  /* In your CSS or SCSS file */
+
+
   plugins: [],
 }
 

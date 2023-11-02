@@ -1,13 +1,12 @@
-import React from "react";
 import {
   AiOutlineMenu,
   AiOutlineHome,
   AiOutlineMail,
-  AiOutlineProfile,
 } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
 import Logo from "./logo";
+import {SiAboutdotme} from 'react-icons/si';
 
 import { useState } from "react";
 
@@ -18,7 +17,7 @@ const Navbar = () => {
     console.log("harmburger click");
   };
   return (
-    <div className=" bg-gray-300 h-18 w-full ">
+    <div className=" bg-transparent backdrop-blur-sm  h-16 w-full  fixed top-0 z-50 ">
      <div
         id="menuIcon"
         onClick={handleNav}
@@ -32,28 +31,42 @@ const Navbar = () => {
       {nav ? (
         <div className="w-full h-screen bg-black/90 flex flex-col justify-center items-center">
           <a
-            href="main"
+            onClick={handleNav}
+            href="#Home"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={20} />
             <span className="pl-4">Home</span>
           </a>
+        
           <a
-            href="projects"
+            onClick={handleNav}
+            href="#Projects"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <GrProjects size={20} />
             <span className="pl-4">Projects</span>
           </a>
           <a
-            href="contact"
+            onClick={handleNav}
+            href="#About"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <SiAboutdotme size={20} />
+            <span className="pl-4">About</span>
+          </a>
+          <a
+            onClick={handleNav}
+            href="#ContactUs"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineMail size={20} />
             <span className="pl-4">Contact</span>
           </a>
+
           <a
-            href="main"
+            onClick={handleNav}
+            href="/src/assets/RESUME.pdf" target="_blank" rel="noopener noreferrer"
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <BsPerson size={20} />
@@ -66,46 +79,54 @@ const Navbar = () => {
             <div className="flex items-center">
               <Logo />
             </div>
-
-            <nav className="relative flex items-center ">
-              <a href="/" className="mr-4 hover:border-b hover:border-solid hover:border-gray-900 hover:transition ease-in duration-300">
-                Home
-              </a>
-              <a href="/projects" className="mx-4  hover:border-b hover:border-solid hover:border-gray-900 hover:transition ease-in duration-300">
-                Projects
-              </a>
-              <a href="/contact" className="mx-4 hover:border-b hover:border-solid hover:border-gray-900 hover:transition ease-in duration-300">
-                Contact
-              </a>
-              <a href="/resume" className="ml-4 hover:border-b hover:border-solid hover:border-gray-900 hover:transition ease-in duration-300">
-                Resume
-              </a>
-            </nav>
+            <nav className="relative flex items-center">
+  <a href="#Home" className="nav-link">
+    Home
+  </a>
+  <a href="#Projects" className="nav-link">
+    Projects
+  </a>
+  <a href="#About" className="nav-link">
+    About
+  </a>
+  <a href="#ContactUs" className="nav-link">
+    Contact
+  </a>
+  <a href="/src/assets/RESUME.pdf" target="_blank" rel="noopener noreferrer" className="nav-link">
+    Resume
+  </a>
+</nav>
           </div>
         </header>
       )}
-      <div className="md:block hidden fixed top-[25%] z-10">
+      <div className="md:block hidden absolute z-10">
         <div className="flex flex-col">
           <a
-            href="main"
+            href="#Home"
             className="rounded-full, bg-transparent shadow-lg bg-gray-300 shadow-gray-300 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <AiOutlineHome />
           </a>
           <a
-            href="projects"
+            href="#Projects"
             className="rounded-full, bg-transparent shadow-lg bg-gray-300 shadow-gray-300 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <GrProjects />
           </a>
+          <a 
+            href="#About"
+            className="rounded-full, bg-transparent shadow-lg bg-gray-300 shadow-gray-300 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+          >
+            <SiAboutdotme />
+          </a>
           <a
-            href="contact"
+            href="#ContactUs"
             className="rounded-full, bg-transparent shadow-lg bg-gray-300 shadow-gray-300 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <AiOutlineMail />
           </a>
           <a
-            href="main"
+             href="/src/assets/RESUME.pdf" target="_blank" rel="noopener noreferrer"
             className="rounded-full, bg-transparent shadow-lg bg-gray-300 shadow-gray-300 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <BsPerson />
@@ -118,72 +139,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-// import React, { useState } from 'react';
-// import { AiOutlineMenu, AiOutlineHome, AiOutlineMail, AiOutlineProfile } from 'react-icons/ai';
-// import { GrProjects } from 'react-icons/gr';
-// import { BsPerson } from 'react-icons/bs';
-// import Logo from './logo';
-
-// const desktopNavLinks = [
-//     { url: '/', label: 'Home', className: 'mr-4' },
-//     { url: '/projects', label: 'Projects', className: 'mx-4' },
-//     { url: '/contact', label: 'Contact', className: 'mx-4' },
-//     { url: '/resume', label: 'Resume', className: 'ml-4' },
-// ];
-
-// const NavLink = ({ icon, label, classes }) => (
-//     <a href="main" className={classes}>
-//         {icon}
-//         <span className='pl-4'>{label}</span>
-//     </a>
-// );
-
-// const Navbar = () => {
-//     const [nav, setNav] = useState(false);
-
-//     const handleNav = () => {
-//         setNav(!nav);
-//     }
-
-//     const commonNavLinkClasses = 'rounded-full bg-gray-300 shadow-lg bg-gray-100 shadow-gray-100 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300';
-
-//     return (
-//         <div>
-//             <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-99 md:hidden' />
-//             {
-//                 nav ? (
-//                     <div className='fixed w-full h-screen bg-black/90 flex flex-col justify-center items-center z-20'>
-//                         {/* Navigation links */}
-//                         <NavLink icon={<AiOutlineHome size={20} />} label="Home" classes={commonNavLinkClasses} />
-//                         <NavLink icon={<GrProjects size={20} />} label="Projects" classes={commonNavLinkClasses} />
-//                         <NavLink icon={<AiOutlineMail size={20} />} label="Contact" classes={commonNavLinkClasses} />
-//                         <NavLink icon={<BsPerson size={20} />} label="Resume" classes={commonNavLinkClasses} />
-//                     </div>
-//                 ) : (
-//                     <header className="md:block hidden w-full font-medium px-32 py-4">
-//                         <div className='flex items-center justify-between'>
-//                             <div className="flex items-center">
-//                                 <Logo />
-//                             </div>
-//                             <nav className="relative flex items-center">
-//                                 {desktopNavLinks.map((link, index) => (
-//                                     <a key={index} href={link.url} className={link.className}>
-//                                         {link.label}
-//                                     </a>
-//                                 ))}
-//                             </nav>
-//                         </div>
-//                     </header>
-//                 )}
-//                 <div className='md:block hidden fixed top-[25%] z-10'>
-//                     <div className='flex flex-col'>
-//                         {desktopNavLinks.map((link, index) => (
-//                             <NavLink key={index} icon={link.icon} label={link.label} classes={commonNavLinkClasses} />
-//                         ))}
-//                     </div>
-//                 </div>
-//             </div>
-//     );
-// }
-
-// export default Navbar;
