@@ -1,37 +1,39 @@
 body {
-    background-color: #000;
-  }
-  .eyes {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    column-gap: 20px;
-  }
-  
-  .eye {
-    width: 85px;
-    height: 70px;
-    border-radius: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .pupil {
-    width: 40px;
-    height: 40px;
-    border-radius: 101px;
-    background-color: #000;
-  }
-  .eye-tracker {
-    position: fixed; /* This will keep it fixed relative to the viewport */
-    top: 0; /* Position at the top of the viewport */
-    left: 0; /* Position at the left of the viewport */
-    z-index: 10; /* Adjust the z-index to ensure it appears above other elements if needed */
-    /* You may need to set width, height, and other styles to achieve your desired look */
-  }
-  
+  background-color: #000;
+}
+
+.eyes {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.eye {
+  width: 85px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pupil {
+  width: 40px;
+  height: 40px;
+  border-radius: 101px;
+  background-color: #000;
+}
+
+.eye-tracker {
+  position: fixed; /* This will keep it fixed relative to the viewport */
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Position at the left of the viewport */
+  z-index: 10; /* Adjust the z-index to ensure it appears above other elements if needed */
+
+  /* You may need to set width, height, and other styles to achieve your desired look */
+}

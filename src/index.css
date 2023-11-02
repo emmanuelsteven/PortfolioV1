@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .nav-link {
-    @apply mx-4 hover:border-b hover:border-solid hover:border-gray-900 hover:transition ease-in duration-300;
-  }
-  *{
-    scroll-behavior: smooth;
-  }
+  @apply mx-4 hover:border-b hover:border-solid hover:border-gray-900 hover:transition ease-in duration-300;
+}
+
+* {
+  scroll-behavior: smooth;
+}
